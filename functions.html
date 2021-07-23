@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>type of functions</title>
+</head>
+<body>  
+    <script>
+     //function using return;
+       function add(x,y)
+    { 
+       {
+           var total=x+y;
+           
+       }
+       return total;
+    }
+       var a=add(20,21);
+       console.log(a);
+        
+     //function with default parameters
+     
+     function gstCalc(amount,gst=18)
+     {
+        //x=amount,y=gst
+        //gst formula=x+(x*y)/100;
+         var totally=amount+(amount*gst)/100;
+         return totally;
+     }
+    var g= gstCalc(2000);
+    console.log(g);
+   
+   
+//Anonymous function
+    var r=function(){
+       console.log("anyonymous function")
+    }
+    r();
+// self invoking function
+    (function(){
+        console.log('this is my invoking function')
+    })();
+
+     var a='string';
+    (function(){
+        var a=3
+        console.log(a);
+        return a;
+    })();
+    console.log(a);
+//function expression
+    var subbtr=function(h,k){
+        var tot=h-k
+        return tot;
+    }
+   var x= subbtr(1000,500)
+    console.log(x);
+//Arrow function 
+    let t = mul =(a,b) =>
+    {
+        t=a*b;
+    }
+    let m=t(10,2)
+    console.log(t);
+//call back function
+
+    function  laptop(x,dell)
+    {
+        console.log('It is not a mobile')
+        console.log(x)
+        dell();
+    }
+   
+    function mobile()
+    {
+        console.log('It is a laptop')
+    }
+   
+    laptop('acer',mobile);
+//High order functions
+//Higher order is a function they can passed into other function as parameters or returned fron them as well
+// In these high order functions having 5 types of array methos.
+//forEach()
+//map()
+//reduce()
+//filter()
+//sort()
+const companies= [
+  {name: "Company One", category: "Finance", start: 1981, end: 2004},
+  {name: "Company Two", category: "Retail", start: 1992, end: 2008},
+  {name: "Company Three", category: "Auto", start: 1999, end: 2007},
+  {name: "Company Four", category: "Retail", start: 1989, end: 2010},
+  {name: "Company Five", category: "Technology", start: 2009, end: 2014},
+  {name: "Company Six", category: "Finance", start: 1987, end: 2010},
+  {name: "Company Seven", category: "Auto", start: 1986, end: 1996},
+  {name: "Company Eight", category: "Technology", start: 2011, end: 2016},
+  {name: "Company Nine", category: "Retail", start: 1981, end: 1989}
+];
+
+const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+
+//forEach method
+
+//IN Before we are these loops like,
+//for(let i=0;i<companies.length;i++)
+//console.log(companies[i]);
+//but we reduce the code to using this forEach method
+
+companies.forEach(function(comp){
+    console.log(comp.name)
+});
+//map method
+
+const employe=companies.map(function(company){
+        return company.category;
+});
+console.log(employe);
+
+
+// const employe=companies.map(function(company){
+//     return `${company.name} [${company.start}-${company.end}]`;
+// });
+// console.log(employe)
+
+// const testMap=companies.map(company=>`${company.name} [${company.start}-${company.end}]`);
+// console.log(testMap);
+
+// const testAge=ages.map(age=>age*2);
+//         console.log(testAge)
+    
+
+//reduce method
+
+// In parameters .reduce(accumulator,currentvalue)
+//accumulator is the value returned by the last iteration
+//current is the current element.
+
+//In loops we are using this type of forloop in previous method
+// let ageSum=0;
+// for(let i=0;i<ages.length;i++)
+// {
+//     ageSum+=ages[i]
+// }
+// console.log(ages)
+
+// const agesum=ages.reduce(function(total,age){
+//     return total+age;
+// },0);
+// console.log(agesum);
+
+// const agesum=ages.reduce((total,age)=>total+age,0);
+// console.log(agesum);
+// const totalYears=companies.reduce(function(total,company)
+// {
+//     return total+(company.end-company.start);
+// },0);
+// console.log(totalYears);
+
+const totalYears=companies.reduce((total,company)=> total+(company.end-company.start),0);
+console.log(totalYears);
+//filter method
+
+// In previous we are this type of loop
+// let can = [];
+// for(let i = 0; i < ages.length; i++) {
+//   if(ages[i] >= 21) {
+//     can.push(ages[i]);
+//   }
+// }
+// console.log(can);
+
+// const can=ages.filter(function(age){
+//     if(age>=21){
+//         return true;
+//     }
+// });
+// console.log(can);
+
+const can=ages.filter(age=>age >= 21);
+console.log(can);
+//ex-2--filter
+const retailc=companies.filter(function(co)
+{
+    if(co.category==="Retail")
+    return true;
+});
+console.log(retailc);
+
+//sort method()
+const sorted =companies.sort((a,b)=>(a.start>b.start?1:-1))
+console.log(sorted);
+//recursive method()
+//The recursive function is a function that call itself until it doesn't
+
+function factorial (n)
+{
+    if(n==1||n==0)
+    return 1;
+    else
+    return n=factorial(n-2)
+}
+console.log(factorial(4))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     
+    
+    </script>
+</body>
+</html>
