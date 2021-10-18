@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reduce method</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+        const x=[2,3,4,3,43,23,34,223,343]
+        //syntax-------array.reduce(function(previousvalue,currentvalue,arr),initial value)
+        const y= x.reduce((total,current)=>{
+
+            return total+current
+            // console.log(total);
+            
+        },0);
+        console.log(y);
+</script>
+</html>
