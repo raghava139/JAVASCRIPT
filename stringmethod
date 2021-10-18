@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x="abcdefghijklmnopqrstuvwxyz";
+        console.log(x.length);
+
+        var sent="THIS IS JAVASCRIPT";
+        var a=sent.includes('JAVASCRIPT');
+        document.write(a);
+
+        var word="THIS IS CSS";
+        var c=word.indexOf("CSS");
+        console.log(c);
+
+        var firstName="yallamanda"
+        var lastName="raghavendra"
+        var fullName=firstName.concat(lastName);
+        console.log(fullName);
+
+        var j="this is jquery";
+        var k=j.endsWith("ry");
+        console.log(k);
+
+        var m="this is my program";
+        var n=m.startsWith('this');
+        console.log(n);
+
+        var u="so it is funny";
+        var v=u.replace("is","was");
+        console.log(v);
+
+        var p="this is my paragraph";
+        var q=p.charCodeAt(2);
+        console.log(q);
+
+        var school="vrschool";
+        var e=school.charAt(2);
+        console.log(e);
+
+        var college="this is our aits college";
+        var f=college.search("o");
+        console.log(f);
+
+        var laptop="this is my dell"
+        var b=laptop.split('my');
+        document.write(b);
+
+        var name='mynameisraghavendra'
+        var r=name.slice(8,14);
+        console.log(r);
+
+        var color="thiswaswonderful";
+        var s=color.substring(4,7);
+        console.log(s);
+
+        var upi='network';
+        var money=upi.toUpperCase('network');
+        console.log(money);
+
+        var power="     lenovolaptop    "
+        var trending=power.trim();
+       // alert(trending);
+
+        var colorName="             this is black color      ";
+        var as=colorName.trimStart();
+       // alert(as);
+        
+       var blue="colorwhite";
+       var green=blue.trimEnd();
+      // alert(green);
+
+      var laptops="this is our college and also it is very good college";
+      var tabs=laptops.match(/college/g);
+      console.log(tabs);
+
+      var street='in our collge having brances';
+      var sss=street.lastIndexOf('e');
+      console.log(sss);
+
+      var stay="playbutton"
+      var music=stay.repeat(2);
+      console.log(music);
+
+      var real="rtcbusesisa government buses";
+      var wx=real.substr(0,10);
+      console.log(wx);
+
+      var comment ='50';
+      var share=comment.toString()
+      console.log(share + 20);
+
+      var realstring="methods";
+      var ways=realstring.valueOf();
+      console.log(ways);
+
+    </script>
+</body>
+</html>

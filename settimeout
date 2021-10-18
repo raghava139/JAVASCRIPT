@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set time out & set interval</title>
+    <style>
+        .movement{
+            font-size: 60px;
+            border:10px solid red;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1 class="movement">this is my time mission</h1>
+    <script>
+    //setTimeout
+    //setInterval
+    //clearTimeout
+    //clearInterval
+        var mov;
+        function mov(){
+            console.log('This is time out');
+        }
+
+        let y=setTimeout(mov,5000,'hello');
+        clearTimeout(y);
+       
+        let s=setInterval(mov,1000,'msg');
+      
+        clearInterval(s);
+
+
+        
+    </script>
+</body>
+</html>
